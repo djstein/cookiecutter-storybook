@@ -1,0 +1,108 @@
+{
+  "name": "{{cookiecutter.project_slug}}",
+  "version": "2018.6.13.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url":
+      "https://github.com/{{cookiecutter.github_org}}/{{cookiecutter.project_slug}}.git"
+  },
+  "main": "./src/index.js",
+  "module": "es/index.js",
+  "scripts": {
+    "build": "node ./tools/build.js",
+    "watch": "babel ./src -d . --ignore __tests__ --watch",
+    "prepublishOnly": "node ./tools/build.js",
+    "clean": "git clean -fdX .",
+    "lint": "eslint src",
+    "test": "jest",
+    "storybook": "start-storybook -p 6006 -s .storybook/static",
+    "build-storybook":
+      "build-storybook -o storybook-static -s .storybook/static",
+    "deploy-storybook": "storybook-to-ghpages"
+  },
+  "files": ["dist", "lib", "src", "es"],
+  "author": "{{cookiecutter.name}} <{{cookiecutter.email}}m>",
+  "bugs": {
+    "url":
+      "https://github.com/{{cookiecutter.github_org}}/{{cookiecutter.project_slug}}/issues"
+  },
+  "homepage":
+    "https://github.com/{{cookiecutter.github_org}}/{{cookiecutter.project_slug}}",
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "dependencies": {
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "moment": "^2.22.2",
+    "prop-types": "^15.6.1",
+    "react-dates": "^16.7.0",
+    "react-modal": "^3.4.5",
+    "react-moment-proptypes": "^1.6.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-select": "^2.0.0-beta.6",
+    "react-text-mask": "^5.4.2",
+    "styled-components": "^3.3.2",
+    "text-mask-addons": "^3.7.2"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.4.7",
+    "@storybook/addon-info": "^3.4.7",
+    "@storybook/addon-links": "^3.4.7",
+    "@storybook/addon-notes": "^3.4.7",
+    "@storybook/addon-options": "^3.4.7",
+    "@storybook/addons": "^3.4.7",
+    "@storybook/react": "^3.4.7",
+    "@storybook/storybook-deployer": "^2.3.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-jest": "^22.4.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-dev-expression": "^0.2.1",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-styled-components": "^1.5.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-runtime": "^6.26.0",
+    "codecov": "^3.0.0",
+    "create-react-class": "^15.6.3",
+    "cross-env": "^5.1.4",
+    "css-loader": "^0.28.11",
+    "es3ify": "^0.2.0",
+    "eslint": "^4.19.1",
+    "eslint-plugin-import": "^2.10.0",
+    "eslint-plugin-react": "^7.7.0",
+    "file-loader": "^1.1.11",
+    "glob": "^7.1.1",
+    "gzip-size": "^4.1.0",
+    "jest": "^22.4.3",
+    "pretty-bytes": "^4.0.2",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
+    "react-test-renderer": "^16.3.0",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.57.1",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-commonjs": "^9.1.0",
+    "rollup-plugin-css-only": "^0.4.0",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-replace": "^2.0.0",
+    "rollup-plugin-uglify": "^3.0.0"
+  },
+  "browserify": {
+    "transform": ["loose-envify"]
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
+  }
+}
