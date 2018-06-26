@@ -1,5 +1,5 @@
 {
-  "name": "{{cookiecutter.project_slug}}",
+  "name": "{{cookiecutter.project_name}}",
   "version": "2018.6.13.0",
   "description": "",
   "repository": {
@@ -22,7 +22,7 @@
     "deploy-storybook": "storybook-to-ghpages"
   },
   "files": ["dist", "lib", "src", "es"],
-  "author": "{{cookiecutter.name}} <{{cookiecutter.email}}m>",
+  "author": "{{cookiecutter.author_name}} <{{cookiecutter.email}}m>",
   "bugs": {
     "url":
       "https://github.com/{{cookiecutter.github_org}}/{{cookiecutter.project_slug}}/issues"

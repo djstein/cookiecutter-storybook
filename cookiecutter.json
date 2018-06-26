@@ -5,6 +5,7 @@
   "description": "Storybook",
   "author_name": "Dylan Stein",
   "domain_name": "example.com",
+  "github_org": "djstein",
   "email": "{{ cookiecutter.author_name.lower()|replace(' ', '-') }}@ncsu.edu",
   "open_source_license": [
     "MIT",
