@@ -2,6 +2,5 @@
 /config/
 /dist/
 /*.js
-{{#unit}}
+/unit/
 /test/unit/coverage/
-{{/unit}}
