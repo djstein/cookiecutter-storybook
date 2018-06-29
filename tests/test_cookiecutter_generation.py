@@ -14,14 +14,14 @@ def context():
     return {
         "project_name": "My Test Project",
         "project_slug": "my_test_project",
+        "github_org": "djstein",
         "author_name": "Test Author",
         "email": "test@example.com",
         "description": "A short description of the project.",
         "domain_name": "example.com",
         "version": "0.1.0",
-        "timezone": "UTC",
+        "open_source_license": "MIT"
     }
-
 
 def build_files_list(root_dir):
     """Build a list containing absolute paths to the generated files."""
@@ -75,13 +75,3 @@ def test_enabled_features(cookies, feature_context):
     paths = build_files_list(str(result.project))
     assert paths
     check_paths(paths)
-
-
-def test_flake8_compliance(cookies):
-    """generated project should pass flake8"""
-    result = cookies.bake()
-
-    try:
-        sh.flake8(str(result.project))
-    except sh.ErrorReturnCode as e:
-        pytest.fail(e)
