@@ -1,6 +1,5 @@
 import os
 import re
-import sh
 
 import pytest
 from binaryornot.check import is_binary
