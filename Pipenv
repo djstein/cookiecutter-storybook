@@ -5,8 +5,6 @@ name = "pypi"
 
 [packages]
 cookiecutter = "*"
-
-[dev-packages]
 binaryornot = "*"
 flake8 = "*"
 pytest = "*"
