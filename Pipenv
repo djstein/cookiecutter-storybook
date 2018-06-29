@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+cookiecutter = "*"
+
+[dev-packages]
+binaryornot = "*"
+flake8 = "*"
+pytest = "*"
+pytest-runner = "*"
+pytest-cookies = "*"
+tox = "*"
+
+[requires]
+python_version = "3.6"
