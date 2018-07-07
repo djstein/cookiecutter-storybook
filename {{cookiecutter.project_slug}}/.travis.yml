@@ -19,3 +19,4 @@ deploy:
   bucket: "{{cookiecutter.s3_bucket_storybook}}"
   skip_cleanup: true
   local_dir: storybook-static
+  acl: public_read
