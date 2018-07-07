@@ -15,7 +15,6 @@
     "prepublishOnly": "node ./tools/build.js",
     "clean": "git clean -fdX .",
     "lint": "eslint src",
-    "test": "jest",
     "storybook": "start-storybook -p 6006 -s .storybook/static",
     "build-storybook":
       "build-storybook -o storybook-static -s .storybook/static",
