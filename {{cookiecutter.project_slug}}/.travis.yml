@@ -11,7 +11,7 @@ cache:
 install:
   - yarn
 
-build:
+script:
   - yarn build-storybook
 
 deploy:
