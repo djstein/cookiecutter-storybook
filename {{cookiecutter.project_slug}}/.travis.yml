@@ -20,3 +20,4 @@ deploy:
   skip_cleanup: true
   local_dir: storybook-static
   acl: public_read
+  region: {{cookiecutter.region}}
